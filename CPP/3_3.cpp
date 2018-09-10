@@ -21,12 +21,22 @@ sub-stack.
 
 using namespace std;
 
+template <class T>
 class SetOfStacks{
 public:
-
+  SetOfStacks();
+  void push(StackNode<T> newNode);
+  StackNode<T> pop();
+  StackNode<T> popAt(int index);
 private:
-
+  vector< Stack<T> > theSet;
 };
+
+template <class T>
+void SetOfStacks::push(StackNode<T> newNode){
+
+}
+
 
 int main(){
   Stack<int> myStack;

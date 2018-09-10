@@ -33,8 +33,10 @@ Node* BST(int (&arr)[LENGTH], int left, int right){
 }
 
 void print(Node* root){
-  if(root == NULL)
+  if(root == NULL){
+    cout << "done" << endl;
     return;
+  }
   cout << "self = " << root->val << endl;
   if(root->leftChild != NULL){
     cout << "leftChild: " << root->leftChild->val << endl;
