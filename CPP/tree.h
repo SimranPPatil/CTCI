@@ -11,8 +11,8 @@ template<class T>
 struct Node{
   T data;
   Node<T>* right;
-  Node* left;
-  Node(T newData): data(newData){}
+  Node<T>* left;
+  Node(T newData): data(newData), left(NULL), right(NULL){}
   ~Node(){
     free(right);
     free(left);
@@ -34,7 +34,6 @@ Node<T>* createTree(vector<T> nodes){
   vector< Node<T>* > tree;
   for(int i = 0; i < nodes.size(); i++){
     Node<T>* self = new Node<T>(nodes[i]);
-    cout << "self: " << self->data << endl;
     tree.push_back(self);
   }
 
